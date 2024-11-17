@@ -29,8 +29,8 @@ bool UAC_Grabbing::AttempGrab()
 	}
 	
 	FHitResult HitResult;
-	FLinearColor TraceColor;
-	FLinearColor TraceHitColor;
+	FLinearColor TraceColor = FLinearColor();
+	FLinearColor TraceHitColor = FLinearColor();
 	TArray<AActor*> IgnoreActors;
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	ObjectTypes.Add(UEngineTypes::ConvertToObjectType(ECollisionChannel::ECC_PhysicsBody));
